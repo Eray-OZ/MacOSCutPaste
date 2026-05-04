@@ -13,6 +13,7 @@ final class CutPasteController: ObservableObject {
     private var runLoopSource: CFRunLoopSource?
 
     init() {
+        LoginItemManager.enableLaunchAtLogin()
         PermissionManager.requestAccessibilityIfNeeded()
         PermissionManager.triggerFinderAutomationPrompt()
         startKeyboardMonitor()
