@@ -8,6 +8,7 @@ final class CutPasteController: ObservableObject {
     @Published private(set) var lastError: String?
     @Published private(set) var debugText = "Keyboard monitor is starting"
 
+    private let hud = HUDWindowController()
     private var eventTap: CFMachPort?
     private var runLoopSource: CFRunLoopSource?
 
@@ -151,6 +152,11 @@ final class CutPasteController: ObservableObject {
         pendingItems = selectedItems
         statusText = "\(selectedItems.count) item(s) marked to move"
         lastError = nil
+        hud.show(
+            message: "Marked to move",
+            detail: selectedItems.count == 1 ? selectedItems[0].lastPathComponent : "\(selectedItems.count) items",
+            symbolName: "scissors"
+        )
     }
 
     private func movePendingItemsToFinderLocation() {
@@ -176,6 +182,11 @@ final class CutPasteController: ObservableObject {
             }
 
             statusText = "\(pendingItems.count) item(s) moved"
+            hud.show(
+                message: "Moved",
+                detail: pendingItems.count == 1 ? pendingItems[0].lastPathComponent : "\(pendingItems.count) items",
+                symbolName: "checkmark.circle.fill"
+            )
             pendingItems = []
             lastError = nil
         } catch {

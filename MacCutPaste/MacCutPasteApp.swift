@@ -12,8 +12,14 @@ struct MacCutPasteApp: App {
     @StateObject private var controller = CutPasteController()
 
     var body: some Scene {
-        MenuBarExtra("MacCutPaste", systemImage: "scissors") {
+        MenuBarExtra {
             MenuBarView(controller: controller)
+        } label: {
+            if controller.pendingItems.isEmpty {
+                Image(systemName: "scissors")
+            } else {
+                Label("Cut: \(controller.pendingItems.count)", systemImage: "scissors")
+            }
         }
         .menuBarExtraStyle(.window)
     }
