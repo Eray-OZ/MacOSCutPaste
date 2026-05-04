@@ -10,9 +10,22 @@
 		F81410BC2FA8BB11000D7E37 /* MacCutPaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacCutPaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F81410CB2FA8BEA0000D7E37 /* Exceptions for "MacCutPaste" folder in "MacCutPaste" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F81410BB2FA8BB11000D7E37 /* MacCutPaste */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F81410BE2FA8BB11000D7E37 /* MacCutPaste */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F81410CB2FA8BEA0000D7E37 /* Exceptions for "MacCutPaste" folder in "MacCutPaste" target */,
+			);
 			path = MacCutPaste;
 			sourceTree = "<group>";
 		};
@@ -250,15 +263,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacCutPaste/MacCutPaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7N2ZY2DH3N;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacCutPaste/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Finder’daki seçili dosyaları ve geçerli klasörü okuyarak kes-yapıştır taşıma işlemini gerçekleştirmek için Finder’ı kontrol etme izni gerekir.\n";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -282,15 +297,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacCutPaste/MacCutPaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7N2ZY2DH3N;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacCutPaste/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Finder’daki seçili dosyaları ve geçerli klasörü okuyarak kes-yapıştır taşıma işlemini gerçekleştirmek için Finder’ı kontrol etme izni gerekir.\n";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

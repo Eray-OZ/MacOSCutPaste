@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MacCutPasteApp: App {
+    @StateObject private var controller = CutPasteController()
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("MacCutPaste", systemImage: "scissors") {
+            MenuBarView(controller: controller)
         }
+        .menuBarExtraStyle(.window)
     }
 }
